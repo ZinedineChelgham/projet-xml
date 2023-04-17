@@ -1,0 +1,14 @@
+<!DOCTYPE agence [
+    <!ATTLIST agence id ID #REQUIRED>
+    <!ELEMENT agence (nom, adresse, telephone, mail, site, description, photo, offres_sejours*)>
+    <!ELEMENT nom (#PCDATA)>
+    <!ELEMENT adresse (#PCDATA)>
+    <!ELEMENT telephone (#PCDATA)>
+    <!ELEMENT mail (#PCDATA)>
+    <!ELEMENT site (#PCDATA)>
+    <!ELEMENT description (#PCDATA)>
+    <!ELEMENT photo (#PCDATA)>
+    <!ENTITY % offres_sejours SYSTEM "offres_sejours.dtd">%offres_sejours;
+
+
+]>

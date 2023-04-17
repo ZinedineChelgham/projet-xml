@@ -1,0 +1,43 @@
+<!ELEMENT offres_sejours (infos_generales, cours_langue, test_langue?, activites*)>
+        <!ATTLIST offres_sejours id ID #REQUIRED>
+
+        <!ELEMENT infos_generales (langue, destination, type_sejour, public, duree, prix, date_debut, date_fin, nb_places)>
+        <!ELEMENT langue (#PCDATA)><!ATTLIST langue id ID #REQUIRED>
+        <!ELEMENT destination (#PCDATA)><!ATTLIST destination id ID #REQUIRED>
+        <!ELEMENT type_sejour (colony | groupe_scolaire | immersion_en_famille)>
+        <!ELEMENT colony (#PCDATA)><!ATTLIST colony id ID #REQUIRED>
+        <!ELEMENT groupe_scolaire (#PCDATA)><!ATTLIST groupe_scolaire id ID #REQUIRED>
+        <!ELEMENT immersion_en_famille (famille_d_accueil*)>
+
+
+        <!ELEMENT public (adulte | adolescent | enfant)>
+        <!ELEMENT enfant (#PCDATA)>
+        <!ELEMENT adulte (#PCDATA)>
+        <!ELEMENT adolescent (#PCDATA)>
+
+        <!ELEMENT duree (#PCDATA)>
+        <!ELEMENT prix (#PCDATA)>
+        <!ELEMENT date_debut (#PCDATA)>
+        <!ELEMENT date_fin (#PCDATA)>
+        <!ELEMENT nb_places (#PCDATA)>
+
+        <!ELEMENT cours_langue (cours_prononciation, cours_grammaire, cours_vocabulary)>
+        <!ELEMENT test_langue (test_ecrit, test_oral?)>
+        <!ELEMENT cours_prononciation (#PCDATA)>
+        <!ELEMENT cours_grammaire (#PCDATA)>
+        <!ELEMENT cours_vocabulary (#PCDATA)>
+        <!ELEMENT test_ecrit (#PCDATA)>
+        <!ELEMENT test_oral (#PCDATA)>
+
+        <!ELEMENT activites (activite_sportive | activite_culturelle)>
+        <!ELEMENT activite_sportive (#PCDATA)>
+        <!ELEMENT activite_culturelle (#PCDATA)>
+
+        <!ENTITY % famille_d_accueil SYSTEM "famille_d'accueil.dtd">
+        %famille_d_accueil;
+
+        ]>
+
+
+
+
