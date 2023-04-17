@@ -1,7 +1,7 @@
 <!ELEMENT offres_sejours (infos_generales, cours_langue, test_langue?, activites*)>
         <!ATTLIST offres_sejours id ID #REQUIRED>
 
-        <!ELEMENT infos_generales (langue, destination, type_sejour, public, duree, prix, date_debut, date_fin, nb_places)>
+        <!ELEMENT infos_generales (langue, destination, type_sejour, public, duree, prix, date_debut, date_fin, nb_places, enseignant, encadrant?)>
         <!ELEMENT langue (#PCDATA)><!ATTLIST langue id ID #REQUIRED>
         <!ELEMENT destination (#PCDATA)><!ATTLIST destination id ID #REQUIRED>
         <!ELEMENT type_sejour (colony | groupe_scolaire | immersion_en_famille)>
@@ -33,8 +33,11 @@
         <!ELEMENT activite_sportive (#PCDATA)>
         <!ELEMENT activite_culturelle (#PCDATA)>
 
-        <!ENTITY % famille_d_accueil SYSTEM "famille_d'accueil.dtd">
-        %famille_d_accueil;
+        <!ELEMENT enseignant (enseignant*, encadrant*)>
+
+
+        <!ENTITY % enseignant SYSTEM "enseignant.dtd">%enseignant;
+        <!ENTITY % famille_d_accueil SYSTEM "famille_d'accueil.dtd">%famille_d_accueil;
 
         ]>
 
