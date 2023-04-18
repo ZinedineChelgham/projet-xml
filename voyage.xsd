@@ -116,7 +116,7 @@
                 <xs:complexType>
                     <xs:sequence>
                         <xs:element name="nom" type="xs:string"/>
-                        <xs:element name="nombre" type="xs:int"/>
+                        <xs:element name="nombre_de_place" type="xs:int"/>
                         <xs:element name="nationalite" type="xs:string"/>
                     </xs:sequence>
                 </xs:complexType>
