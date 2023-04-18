@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xs:schema
+        xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="offres" type="offresType"/>
+    <xs:complexType name="offresType">
+        <xs:sequence>
+            <xs:element ref="offre" minOccurs="1" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="offre"  type="offreType"/>
+    <xs:complexType name="offreType">
+        <xs:sequence>
+            <xs:element ref="vacance_enfant" minOccurs="0"/>
+            <xs:element ref="langues"/>
+            <xs:element ref="destination"/>
+            <xs:element name="activites_sportives" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="activites_culturelles" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="date" type="xs:string"/>
+            <xs:element ref="client"/>
+        </xs:sequence>
+        <xs:attribute name="type" type="TypeOffre" use="required"/>
+    </xs:complexType>
+
+    <xs:simpleType name="TypeClient">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="famille"/>
+            <xs:enumeration value="adulte"/>
+            <xs:enumeration value="enfant"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="TypeOffre">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="colonie"/>
+            <xs:enumeration value="scolaire"/>
+            <xs:enumeration value="accueil"/>
+            <xs:enumeration value="classique"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="client">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nom" type="xs:string"/>
+                <xs:element name="prenom" type="xs:string"/>
+                <xs:element name="age" type="xs:integer"/>
+            </xs:sequence>
+            <xs:attribute name="type" type="TypeClient" use="required"/>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="langues">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="langue" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="destination">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="ville" type="xs:string"/>
+                <xs:element name="pays" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
+
+    <xs:element name="vacance_enfant" type="vacance_enfantType"/>
+    <xs:complexType name="vacance_enfantType">
+        <xs:sequence>
+            <xs:choice>
+                <xs:element ref="colonie_de_vacance"/>
+                <xs:element ref="voyage_scolaire"/>
+                <xs:element ref="immersion_famille_accueil"/>
+            </xs:choice>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="colonie_de_vacance" type="colonie_de_vacanceType"/>
+    <xs:complexType name="colonie_de_vacanceType">
+        <xs:sequence>
+            <xs:element ref="liste_cours"/>
+            <xs:element name="moniteurs" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nom" type="xs:string"/>
+                        <xs:element name="prenom" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="voyage_scolaire" type="voyage_scolaireType"/>
+    <xs:complexType name="voyage_scolaireType">
+        <xs:sequence>
+            <xs:element ref="liste_cours"/>
+            <xs:element name="enseignants" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nom" type="xs:string"/>
+                        <xs:element name="prenom" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="nombre_eleves" type="xs:int"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="immersion_famille_accueil" type="immersion_famille_accueilType"/>
+    <xs:complexType name="immersion_famille_accueilType">
+        <xs:sequence>
+            <xs:element name="famille_accueil">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nom" type="xs:string"/>
+                        <xs:element name="nombre" type="xs:int"/>
+                        <xs:element name="nationalite" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="liste_cours" type="liste_coursType"/>
+    <xs:complexType name="liste_coursType">
+        <xs:sequence>
+            <xs:element name="cours" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nom" type="xs:string"/>
+                        <xs:element name="evaluation" type="xs:boolean"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
