@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <xs:schema
         xmlns:xs="http://www.w3.org/2001/XMLSchema">
-    <xs:element name="offres" type="offresType"/>
-    <xs:complexType name="offresType">
-        <xs:sequence>
-            <xs:element ref="offre" minOccurs="1" maxOccurs="unbounded"/>
-        </xs:sequence>
-    </xs:complexType>
+    <xs:element name="offres">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="offre" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+
 
     <xs:element name="offre"  type="offreType"/>
     <xs:complexType name="offreType">
         <xs:sequence>
             <xs:choice minOccurs="0">
-                <xs:element ref="colonie_de_vacance"/>
+                <xs:element ref="colonie_de_vacances"/>
                 <xs:element ref="voyage_scolaire"/>
                 <xs:element ref="immersion_famille_accueil"/>
             </xs:choice>
@@ -72,10 +75,9 @@
     </xs:element>
 
 
-    <xs:element name="colonie_de_vacance" type="colonie_de_vacanceType"/>
-    <xs:complexType name="colonie_de_vacanceType">
+    <xs:element name="colonie_de_vacances" type="colonie_de_vacancesType"/>
+    <xs:complexType name="colonie_de_vacancesType">
         <xs:sequence>
-            <xs:element ref="liste_cours"/>
             <xs:element name="moniteurs" maxOccurs="unbounded">
                 <xs:complexType>
                     <xs:sequence>
@@ -87,21 +89,25 @@
         </xs:sequence>
     </xs:complexType>
 
-    <xs:element name="voyage_scolaire" type="voyage_scolaireType"/>
-    <xs:complexType name="voyage_scolaireType">
-        <xs:sequence>
-            <xs:element ref="liste_cours"/>
-            <xs:element name="enseignants" maxOccurs="unbounded">
-                <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="nom" type="xs:string"/>
-                        <xs:element name="prenom" type="xs:string"/>
-                    </xs:sequence>
-                </xs:complexType>
-            </xs:element>
-            <xs:element name="nombre_eleves" type="xs:int"/>
-        </xs:sequence>
-    </xs:complexType>
+    <xs:element name="voyage_scolaire">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="matieres"/>
+                <xs:element ref="enseignants"/>
+                <xs:element ref="accompagnateurs"/>
+                <xs:element name="nombre_eleves" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+        <xs:key name="matiere_key">
+            <xs:selector xpath="matieres/matiere"/>
+            <xs:field xpath="@id"/>
+        </xs:key>
+        <xs:keyref name="matiere_keyref" refer="matiere_key">
+            <xs:selector xpath="enseignants/enseignant/matiere"/>
+            <xs:field xpath="@ref-matiere"/>
+        </xs:keyref>
+    </xs:element>
+
 
     <xs:element name="immersion_famille_accueil" type="immersion_famille_accueilType"/>
     <xs:complexType name="immersion_famille_accueilType">
@@ -118,17 +124,57 @@
         </xs:sequence>
     </xs:complexType>
 
-    <xs:element name="liste_cours" type="liste_coursType"/>
-    <xs:complexType name="liste_coursType">
+    <xs:element name="matieres" type="matieresType"/>
+    <xs:complexType name="matieresType">
         <xs:sequence>
-            <xs:element name="cours" maxOccurs="unbounded">
+            <xs:element name="matiere" maxOccurs="unbounded">
                 <xs:complexType>
                     <xs:sequence>
                         <xs:element name="nom" type="xs:string"/>
                         <xs:element name="evaluation" type="xs:boolean"/>
                     </xs:sequence>
+                    <xs:attribute name="id" type="xs:string" use="required"/>
                 </xs:complexType>
             </xs:element>
         </xs:sequence>
     </xs:complexType>
+
+
+    <xs:element name="enseignants" type="enseignantsType"/>
+    <xs:complexType name="enseignantsType">
+        <xs:sequence>
+            <xs:element name="enseignant" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nom" type="xs:string"/>
+                        <xs:element name="prenom" type="xs:string"/>
+                        <xs:element name="matiere-enseignee">
+                            <xs:complexType>
+                                <xs:attribute name="ref-matiere" type="xs:ID" use="required"/>
+                            </xs:complexType>
+                        </xs:element>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+
+
+    <xs:element name="accompagnateurs" type="accompagnateursType"/>
+    <xs:complexType name="accompagnateursType">
+        <xs:sequence>
+            <xs:element name="accompagnateur" maxOccurs="unbounded">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="nom" type="xs:string"/>
+                        <xs:element name="prenom" type="xs:string"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+
+
+
 </xs:schema>

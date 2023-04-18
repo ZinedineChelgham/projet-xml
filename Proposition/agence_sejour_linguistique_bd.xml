@@ -37,20 +37,38 @@
     </offre>
     <offre type="scolaire">
         <voyage_scolaire>
-            <liste_cours>
-                <cours>
+            <matieres>
+                <matiere id='m0'>
                     <nom>Histoire</nom>
                     <evaluation>true</evaluation>
-                </cours>
-                <cours>
+                </matiere>
+                <matiere id='m1'>
                     <nom>Langues étrangères</nom>
                     <evaluation>true</evaluation>
-                </cours>
-            </liste_cours>
+                </matiere>
+            </matieres>
             <enseignants>
-                <nom>Girard</nom>
-                <prenom>Lucie</prenom>
+                <enseignant>
+                    <nom>Girard</nom>
+                    <prenom>Lucie</prenom>
+                    <matiere-enseignee ref-matiere="m0"/>
+                </enseignant>
+                <enseignant>
+                    <nom>Bichon</nom>
+                    <prenom>Thomas</prenom>
+                    <matiere-enseignee ref-matiere="m1"/>
+                </enseignant>
             </enseignants>
+            <accompagnateurs>
+                <accompagnateur>
+                    <nom>Clerc</nom>
+                    <prenom>Clara</prenom>
+                </accompagnateur>
+                <accompagnateur>
+                    <nom>Mitou</nom>
+                    <prenom>Ludivine</prenom>
+                </accompagnateur>
+            </accompagnateurs>
             <nombre_eleves>25</nombre_eleves>
         </voyage_scolaire>
         <langues>
@@ -96,16 +114,6 @@
     </offre>
     <offre type="colonie">
         <colonie_de_vacance>
-            <liste_cours>
-                <cours>
-                    <nom>Anglais</nom>
-                    <evaluation>true</evaluation>
-                </cours>
-                <cours>
-                    <nom>Espagnol</nom>
-                    <evaluation>true</evaluation>
-                </cours>
-            </liste_cours>
             <moniteurs>
                 <nom>Leblanc</nom>
                 <prenom>Antoine</prenom>
