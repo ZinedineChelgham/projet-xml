@@ -36,25 +36,23 @@
             </client>
     </offre>
     <offre type="scolaire">
-        <vacance_enfant>
-            <voyage_scolaire>
-                <liste_cours>
-                    <cours>
-                        <nom>Histoire</nom>
-                        <evaluation>true</evaluation>
-                    </cours>
-                    <cours>
-                        <nom>Langues étrangères</nom>
-                        <evaluation>true</evaluation>
-                    </cours>
-                </liste_cours>
-                <enseignants>
-                    <nom>Girard</nom>
-                    <prenom>Lucie</prenom>
-                </enseignants>
-                <nombre_eleves>25</nombre_eleves>
-            </voyage_scolaire>
-        </vacance_enfant>
+        <voyage_scolaire>
+            <liste_cours>
+                <cours>
+                    <nom>Histoire</nom>
+                    <evaluation>true</evaluation>
+                </cours>
+                <cours>
+                    <nom>Langues étrangères</nom>
+                    <evaluation>true</evaluation>
+                </cours>
+            </liste_cours>
+            <enseignants>
+                <nom>Girard</nom>
+                <prenom>Lucie</prenom>
+            </enseignants>
+            <nombre_eleves>25</nombre_eleves>
+        </voyage_scolaire>
         <langues>
             <langue>Espagnol</langue>
             <langue>Catalan</langue>
@@ -73,15 +71,13 @@
         </client>
     </offre>
     <offre type="accueil">
-        <vacance_enfant>
-            <immersion_famille_accueil>
-                <famille_accueil>
-                    <nom>Leclerc</nom>
-                    <nombre>2</nombre>
-                    <nationalite>française</nationalite>
-                </famille_accueil>
-            </immersion_famille_accueil>
-        </vacance_enfant>
+        <immersion_famille_accueil>
+            <famille_accueil>
+                <nom>Leclerc</nom>
+                <nombre>2</nombre>
+                <nationalite>française</nationalite>
+            </famille_accueil>
+        </immersion_famille_accueil>
         <langues>
             <langue>Francais</langue>
             <langue>Anglais</langue>
@@ -99,28 +95,26 @@
         </client>
     </offre>
     <offre type="colonie">
-        <vacance_enfant>
-            <colonie_de_vacance>
-                <liste_cours>
-                    <cours>
-                        <nom>Anglais</nom>
-                        <evaluation>true</evaluation>
-                    </cours>
-                    <cours>
-                        <nom>Espagnol</nom>
-                        <evaluation>true</evaluation>
-                    </cours>
-                </liste_cours>
-                <moniteurs>
-                    <nom>Leblanc</nom>
-                    <prenom>Antoine</prenom>
-                </moniteurs>
-                <moniteurs>
-                    <nom>Martin</nom>
-                    <prenom>Lucas</prenom>
-                </moniteurs>
-            </colonie_de_vacance>
-        </vacance_enfant>
+        <colonie_de_vacance>
+            <liste_cours>
+                <cours>
+                    <nom>Anglais</nom>
+                    <evaluation>true</evaluation>
+                </cours>
+                <cours>
+                    <nom>Espagnol</nom>
+                    <evaluation>true</evaluation>
+                </cours>
+            </liste_cours>
+            <moniteurs>
+                <nom>Leblanc</nom>
+                <prenom>Antoine</prenom>
+            </moniteurs>
+            <moniteurs>
+                <nom>Martin</nom>
+                <prenom>Lucas</prenom>
+            </moniteurs>
+        </colonie_de_vacance>
         <langues>
             <langue>Anglais</langue>
             <langue>Espagnol</langue>
