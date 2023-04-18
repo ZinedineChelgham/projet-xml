@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE voyage SYSTEM "voyage.dtd">
+<voyage>
+  <offres>
+    <offre type="voyage">
+      <langues>Anglais</langues>
+      <destination>Londres</destination>
+      <activites_sportives>Basket-ball</activites_sportives>
+      <activites_culturelles>Musée</activites_culturelles>
+      <date>2023-08-01</date>
+      <client type="adulte">
+        <nom>Dupont</nom>
+        <prenom>Marie</prenom>
+        <age>35</age>
+      </client>
+    </offre>
+    <offre type="colonie">
+      <langues>Anglais</langues>
+      <destination>Normandie</destination>
+      <activites_sportives>Football</activites_sportives>
+      <activites_culturelles>Visite du Mont-Saint-Michel</activites_culturelles>
+      <date>2023-07-15</date>
+      <client type="enfant">
+        <nom>Leclerc</nom>
+        <prenom>Lucas</prenom>
+        <age>10</age>
+      </client>
+      <moniteurs>
+        <moniteur>
+          <nom>Dupont</nom>
+          <prenom>Lucas</prenom>
+        </moniteur>
+        <moniteur>
+          <nom>Michel</nom>
+          <prenom>Julie</prenom>
+        </moniteur>
+      </moniteurs>
+      <cours>true</cours>
+      <tests>false</tests>
+    </offre>
+    <offre type="voyage_scolaire">
+      <langues>Allemand</langues>
+      <destination>Berlin</destination>
+      <activites_sportives>Course d'orientation</activites_sportives>
+      <activites_culturelles>Visite du musée Checkpoint Charlie</activites_culturelles>
+      <date>2023-05-20</date>
+      <client type="adulte">
+        <nom>Morel</nom>
+        <prenom>Audrey</prenom>
+        <age>38</age>
+      </client>
+      <enseignants>
+        <enseignant>
+          <nom>Dubois</nom>
+          <prenom>Julien</prenom>
+        </enseignant>
+        <enseignant>
+          <nom>Morel</nom>
+          <prenom>Audrey</prenom>
+        </enseignant>
+      </enseignants>
+      <cours>true</cours>
+      <tests>true</tests>
+      <nbr_eleve>25</nbr_eleve>
+    </offre>
+    <offre type="immersion">
+      <langues>Espagnol</langues>
+      <destination>Barcelone</destination>
+      <activites_sportives>Natation</activites_sportives>
+      <activites_culturelles>Visite de la Sagrada Familia</activites_culturelles>
+      <date>2023-06-15</date>
+      <client type="enfant">
+        <nom>Moreau</nom>
+        <prenom>Thomas</prenom>
+        <age>8</age>
+      </client>
+      <famille_d_accueil>
+        <nom>Sanchez</nom>
+        <nombre>4</nombre>
+        <nationalite>Espagnol</nationalite>
+      </famille_d_accueil>
+    </offre>
+  </offres>
+</voyage>

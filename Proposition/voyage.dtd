@@ -1,0 +1,24 @@
+<!ELEMENT voyage (offres)>
+<!ELEMENT offres (offre+)>
+<!ELEMENT offre (langues, destination, activites_sportives, activites_culturelles, date, client, moniteurs?, enseignants?, cours?, tests?, nbr_eleve?, famille_d_accueil?)>
+<!ATTLIST offre type CDATA #REQUIRED>
+<!ELEMENT langues (#PCDATA)>
+<!ELEMENT destination (#PCDATA)>
+<!ELEMENT activites_sportives (#PCDATA)>
+<!ELEMENT activites_culturelles (#PCDATA)>
+<!ELEMENT date (#PCDATA)>
+<!ELEMENT client (nom, prenom, age)>
+<!ATTLIST client type CDATA #REQUIRED>
+<!ELEMENT nom (#PCDATA)>
+<!ELEMENT prenom (#PCDATA)>
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT moniteurs (moniteur+)>
+<!ELEMENT moniteur (nom, prenom)>
+<!ELEMENT enseignants (enseignant+)>
+<!ELEMENT enseignant (nom, prenom)>
+<!ELEMENT cours (#PCDATA)>
+<!ELEMENT tests (#PCDATA)>
+<!ELEMENT nbr_eleve (#PCDATA)>
+<!ELEMENT famille_d_accueil (nom, nombre, nationalite)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT nationalite (#PCDATA)>
