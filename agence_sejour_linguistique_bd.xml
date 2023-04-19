@@ -22,6 +22,26 @@
     </offre>
     <offre type="classique">
         <langues>
+            <langue>Anglais</langue>
+        </langues>
+        <destination>
+            <ville>Londres</ville>
+            <pays>Royaume-Uni</pays>
+        </destination>
+        <activites_sportives>Football</activites_sportives>
+        <activites_culturelles>Visite du British Museum</activites_culturelles>
+        <dates>
+            <debut>2022-02-15</debut>
+            <fin>2022-03-15</fin>
+        </dates>
+        <client type="famille">
+            <nom>Dupont</nom>
+            <prenom>Paul</prenom>
+            <age>46</age>
+        </client>
+    </offre>
+    <offre type="classique">
+        <langues>
             <langue>Espagnol</langue>
         </langues>
         <destination>

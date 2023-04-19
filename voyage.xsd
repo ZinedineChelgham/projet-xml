@@ -41,7 +41,7 @@
         <xs:restriction base="xs:string">
             <xs:enumeration value="colonie"/>
             <xs:enumeration value="scolaire"/>
-            <xs:enumeration value="accueil"/>
+                <xs:enumeration value="accueil"/>
             <xs:enumeration value="classique"/>
         </xs:restriction>
     </xs:simpleType>

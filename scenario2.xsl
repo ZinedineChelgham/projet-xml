@@ -15,6 +15,8 @@
                     <div id="frise-container">
                         <xsl:apply-templates select="offres/offre">
                             <xsl:sort select="dates/debut"/>
+                            <xsl:sort select="destination/pays"/>
+                            <xsl:sort select="destination/ville"/>
                         </xsl:apply-templates>
                     </div>
                     <div class="arrow"></div>
