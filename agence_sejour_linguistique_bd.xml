@@ -57,11 +57,13 @@
                 <enseignant>
                     <nom>Girard</nom>
                     <prenom>Lucie</prenom>
+                    <age>23</age>
                     <matiere-enseignee ref-matiere="m0"/>
                 </enseignant>
                 <enseignant>
                     <nom>Bichon</nom>
                     <prenom>Thomas</prenom>
+                    <age>45</age>
                     <matiere-enseignee ref-matiere="m1"/>
                 </enseignant>
             </enseignants>
@@ -69,10 +71,12 @@
                 <accompagnateur>
                     <nom>Clerc</nom>
                     <prenom>Clara</prenom>
+                    <age>18</age>
                 </accompagnateur>
                 <accompagnateur>
                     <nom>Mitou</nom>
                     <prenom>Ludivine</prenom>
+                    <age>35</age>
                 </accompagnateur>
             </accompagnateurs>
             <nombre_eleves>25</nombre_eleves>
@@ -129,10 +133,12 @@
             <moniteurs>
                 <nom>Leblanc</nom>
                 <prenom>Antoine</prenom>
+                <age>26</age>
             </moniteurs>
             <moniteurs>
                 <nom>Martin</nom>
                 <prenom>Lucas</prenom>
+                <age>32</age>
             </moniteurs>
         </colonie_de_vacances>
         <langues>

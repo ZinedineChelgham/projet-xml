@@ -46,14 +46,22 @@
         </xs:restriction>
     </xs:simpleType>
 
+    <xs:complexType name="personne">
+        <xs:sequence>
+            <xs:element name="nom" type="xs:string"/>
+            <xs:element name="prenom" type="xs:string"/>
+            <xs:element name="age" type="xs:integer"/>
+            <!-- Autres éléments spécifiques à une personne -->
+        </xs:sequence>
+    </xs:complexType>
+
     <xs:element name="client">
         <xs:complexType>
-            <xs:sequence>
-                <xs:element name="nom" type="xs:string"/>
-                <xs:element name="prenom" type="xs:string"/>
-                <xs:element name="age" type="xs:integer"/>
-            </xs:sequence>
-            <xs:attribute name="type" type="TypeClient" use="required"/>
+            <xs:complexContent>
+                <xs:extension base="personne">
+                    <xs:attribute name="type" type="TypeClient" use="required"/>
+                </xs:extension>
+            </xs:complexContent>
         </xs:complexType>
     </xs:element>
 
@@ -89,14 +97,14 @@
         <xs:sequence>
             <xs:element name="moniteurs" maxOccurs="unbounded">
                 <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="nom" type="xs:string"/>
-                        <xs:element name="prenom" type="xs:string"/>
-                    </xs:sequence>
+                    <xs:complexContent>
+                        <xs:extension base="personne"/>
+                    </xs:complexContent>
                 </xs:complexType>
             </xs:element>
         </xs:sequence>
     </xs:complexType>
+
 
     <xs:element name="voyage_scolaire">
         <xs:complexType>
@@ -154,20 +162,21 @@
         <xs:sequence>
             <xs:element name="enseignant" maxOccurs="unbounded">
                 <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="nom" type="xs:string"/>
-                        <xs:element name="prenom" type="xs:string"/>
-                        <xs:element name="matiere-enseignee">
-                            <xs:complexType>
-                                <xs:attribute name="ref-matiere" type="xs:ID" use="required"/>
-                            </xs:complexType>
-                        </xs:element>
-                    </xs:sequence>
+                    <xs:complexContent>
+                        <xs:extension base="personne">
+                            <xs:sequence>
+                                <xs:element name="matiere-enseignee">
+                                    <xs:complexType>
+                                        <xs:attribute name="ref-matiere" type="xs:ID" use="required"/>
+                                    </xs:complexType>
+                                </xs:element>
+                            </xs:sequence>
+                        </xs:extension>
+                    </xs:complexContent>
                 </xs:complexType>
             </xs:element>
         </xs:sequence>
     </xs:complexType>
-
 
 
     <xs:element name="accompagnateurs" type="accompagnateursType"/>
@@ -175,10 +184,10 @@
         <xs:sequence>
             <xs:element name="accompagnateur" maxOccurs="unbounded">
                 <xs:complexType>
-                    <xs:sequence>
-                        <xs:element name="nom" type="xs:string"/>
-                        <xs:element name="prenom" type="xs:string"/>
-                    </xs:sequence>
+                    <xs:complexContent>
+                        <xs:extension base="personne">
+                        </xs:extension>
+                    </xs:complexContent>
                 </xs:complexType>
             </xs:element>
         </xs:sequence>
