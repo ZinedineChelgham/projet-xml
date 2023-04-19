@@ -23,7 +23,7 @@
             <xs:element ref="destination"/>
             <xs:element name="activites_sportives" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
             <xs:element name="activites_culturelles" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
-            <xs:element name="date" type="xs:string"/>
+            <xs:element ref="dates"/>
             <xs:element ref="client"/>
         </xs:sequence>
         <xs:attribute name="type" type="TypeOffre" use="required"/>
@@ -61,6 +61,15 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="langue" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="dates">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="debut" type="xs:string"/>
+                <xs:element name="fin" type="xs:string"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
