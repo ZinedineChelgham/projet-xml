@@ -1,0 +1,9 @@
+th {
+    font-weight: normal;
+}
+.bold {
+    font-weight: bold;
+}
+th{
+    padding-right: 50px;
+}
