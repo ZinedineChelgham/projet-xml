@@ -18,6 +18,7 @@
                     </tr>
                     <xsl:apply-templates select="offres/offre/destination[pays='Espagne']/../.">
                         <xsl:sort select="destination/ville"/>
+                        <xsl:sort select="dates/debut"/>
                     </xsl:apply-templates>
 
                 </table>
