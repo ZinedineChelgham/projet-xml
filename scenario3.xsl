@@ -25,22 +25,6 @@
                     <br/>
                     <h2>Nombre de client par année</h2>
                     <div id="popularity">
-                        <table border="1">
-                            <tr>
-                                <th>Année</th>
-                                <th>Nombre de clients</th>
-                            </tr>
-                            <xsl:for-each select="//offre[count(. | key('clients-par-annee', substring(dates/debut, 1, 4))[1]) = 1]">
-                                <xsl:sort select="substring(dates/debut, 1, 4)" data-type="number" order="ascending"/>
-                                <xsl:variable name="annee" select="substring(dates/debut, 1, 4)"/>
-                                <tr>
-                                    <td><xsl:value-of select="$annee"/></td>
-                                    <td>
-                                        <xsl:value-of select="count(//offre[dates/debut[contains(.,$annee)]])"/>
-                                    </td>
-                                </tr>
-                            </xsl:for-each>
-                        </table>
                         <canvas id="popularityChart"></canvas>
                     </div>
                 </div>
