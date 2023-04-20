@@ -1,4 +1,4 @@
-<offres xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="voyage.xsd">
+<offres xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../voyage.xsd">
     <offre type="classique">
         <langues>
             <langue>Allemand</langue>
