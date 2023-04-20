@@ -15,9 +15,9 @@
                     <xsl:if test="not(preceding::offre[destination/pays = $pays])">
                         <pays name="{$pays}">
                             <!-- Nombre de familles d'accueil pour le pays -->
-                            <nb_familles_accueil>
+                            <nb_total_familles_accueil>
                                 <xsl:value-of select="count(key('offreByPays', concat($pays, '|', $ville))/immersion_famille_accueil/famille_accueil)"/>
-                            </nb_familles_accueil>
+                            </nb_total_familles_accueil>
                             <!-- Afficher la ville uniquement si elle a des familles d'accueil -->
                             <xsl:if test="count(key('offreByPays', concat($pays, '|', $ville))/immersion_famille_accueil/famille_accueil) > 0">
                                 <villes>
@@ -37,7 +37,7 @@
             <xsl:for-each select="//destination/pays[not(../offre/destination/pays = current())]">
                 <xsl:if test="not(preceding::pays[@name = current()/@name]) and normalize-space(@name) != ''">
                     <pays name="{@name}">
-                        <nb_familles_accueil>0</nb_familles_accueil>
+                        <nb_total_familles_accueil>0</nb_total_familles_accueil>
                         <villes>
                             <ville name="Aucune">
                                 <nb_familles_accueil>0</nb_familles_accueil>
