@@ -5,7 +5,7 @@
     <xsl:template match="/">
         <html>
             <head>
-                <link rel="stylesheet" href="style/scenario2.css"/>
+                <link rel="stylesheet" href="../style/scenario2.css"/>
                 <title>Frise chronologique</title>
             </head>
             <body>

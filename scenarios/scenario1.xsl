@@ -5,7 +5,7 @@
     <xsl:template match="/">
         <html>
             <head>
-                <link rel="stylesheet" href="style/scenario1.css"/>
+                <link rel="stylesheet" href="../style/scenario1.css"/>
                 <title>Offre séjour Espagne</title>
             </head>
             <body>

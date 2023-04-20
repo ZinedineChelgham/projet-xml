@@ -6,7 +6,7 @@
     <xsl:template match="/">
         <html>
             <head>
-                <link rel="stylesheet" href="style/scenario3.css"/>
+                <link rel="stylesheet" href="../style/scenario3.css"/>
                 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
                 <title>Clientèle</title>
             </head>
