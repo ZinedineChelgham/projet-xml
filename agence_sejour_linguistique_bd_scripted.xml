@@ -1,68 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <offres xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="voyage.xsd">
-    <offre type="classique">
-        <langues>
-            <langue>Anglais</langue>
-        </langues>
-        <destination>
-            <ville>Londres</ville>
-            <pays>Royaume-Uni</pays>
-        </destination>
-        <activites_sportives>Football</activites_sportives>
-        <activites_culturelles>Visite du British Museum</activites_culturelles>
-        <dates>
-            <debut>2023-07-15</debut>
-            <fin>2023-09-15</fin>
-        </dates>
-        <client type="famille">
-            <nom>Dupont</nom>
-            <prenom>Paul</prenom>
-            <age>46</age>
-            <genre>homme</genre>
-        </client>
-    </offre>
-    <offre type="classique">
-        <langues>
-            <langue>Anglais</langue>
-        </langues>
-        <destination>
-            <ville>Londres</ville>
-            <pays>Royaume-Uni</pays>
-        </destination>
-        <activites_sportives>Baseball</activites_sportives>
-        <activites_culturelles>Visite du British Museum</activites_culturelles>
-        <dates>
-            <debut>2022-02-15</debut>
-            <fin>2022-03-15</fin>
-        </dates>
-        <client type="famille">
-            <nom>Dupont</nom>
-            <prenom>Paul</prenom>
-            <age>46</age>
-            <genre>homme</genre>
-        </client>
-    </offre>
-    <offre type="classique">
-        <langues>
-            <langue>Espagnol</langue>
-        </langues>
-        <destination>
-            <ville>Barcelone</ville>
-            <pays>Espagne</pays>
-        </destination>
-        <activites_sportives>Basketball</activites_sportives>
-        <activites_culturelles>Visite du British Museum</activites_culturelles>
-        <dates>
-            <debut>2023-08-30</debut>
-            <fin>2023-10-30</fin>
-        </dates>
-        <client type="famille">
-            <nom>Dupont</nom>
-            <prenom>Paul</prenom>
-            <age>46</age>
-            <genre>homme</genre>
-        </client>
-    </offre>
     <offre type="classique">
         <langues>
             <langue>Allemand</langue>
@@ -88,12 +24,12 @@
     <offre type="scolaire">
         <voyage_scolaire>
             <matieres>
-                <matiere id='m0'>
+                <matiere id="m0">
                     <nom>Histoire</nom>
                     <evaluation>true</evaluation>
                 </matiere>
-                <matiere id='m1'>
-                    <nom>Langues étrangères</nom>
+                <matiere id="m1">
+                    <nom>Langues &#233;trang&#232;res</nom>
                     <evaluation>true</evaluation>
                 </matiere>
             </matieres>
@@ -103,14 +39,14 @@
                     <prenom>Lucie</prenom>
                     <age>23</age>
                     <genre>femme</genre>
-                    <matiere-enseignee ref-matiere="m0"/>
+                    <matiere-enseignee ref-matiere="m0" />
                 </enseignant>
                 <enseignant>
                     <nom>Bichon</nom>
                     <prenom>Thomas</prenom>
                     <age>45</age>
                     <genre>homme</genre>
-                    <matiere-enseignee ref-matiere="m1"/>
+                    <matiere-enseignee ref-matiere="m1" />
                 </enseignant>
             </enseignants>
             <accompagnateurs>
@@ -138,7 +74,7 @@
             <pays>Espagne</pays>
         </destination>
         <activites_sportives>Golf</activites_sportives>
-        <activites_culturelles>Visite du musée du Prado</activites_culturelles>
+        <activites_culturelles>Visite du mus&#233;e du Prado</activites_culturelles>
         <dates>
             <debut>2023-06-08</debut>
             <fin>2023-09-08</fin>
@@ -156,7 +92,7 @@
             <famille_accueil>
                 <nom>Leclerc</nom>
                 <nombre_de_place>2</nombre_de_place>
-                <nationalite>française</nationalite>
+                <nationalite>fran&#231;aise</nationalite>
             </famille_accueil>
         </immersion_famille_accueil>
         <langues>
@@ -205,7 +141,7 @@
             <pays>Espagne</pays>
         </destination>
         <activites_sportives>Surf, Kayak, Beach-volley</activites_sportives>
-        <activites_culturelles>Visite du musée du Prado</activites_culturelles>
+        <activites_culturelles>Visite du mus&#233;e du Prado</activites_culturelles>
         <dates>
             <debut>2023-05-30</debut>
             <fin>2023-10-24</fin>
