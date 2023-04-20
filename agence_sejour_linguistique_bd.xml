@@ -18,6 +18,7 @@
             <nom>Dupont</nom>
             <prenom>Paul</prenom>
             <age>46</age>
+            <genre>homme</genre>
         </client>
     </offre>
     <offre type="classique">
@@ -38,6 +39,7 @@
             <nom>Dupont</nom>
             <prenom>Paul</prenom>
             <age>46</age>
+            <genre>homme</genre>
         </client>
     </offre>
     <offre type="classique">
@@ -58,6 +60,7 @@
             <nom>Dupont</nom>
             <prenom>Paul</prenom>
             <age>46</age>
+            <genre>homme</genre>
         </client>
     </offre>
     <offre type="classique">
@@ -79,6 +82,7 @@
                 <nom>Dubois</nom>
                 <prenom>Marie</prenom>
                 <age>28</age>
+                <genre>femme</genre>
             </client>
     </offre>
     <offre type="scolaire">
@@ -98,12 +102,14 @@
                     <nom>Girard</nom>
                     <prenom>Lucie</prenom>
                     <age>23</age>
+                    <genre>femme</genre>
                     <matiere-enseignee ref-matiere="m0"/>
                 </enseignant>
                 <enseignant>
                     <nom>Bichon</nom>
                     <prenom>Thomas</prenom>
                     <age>45</age>
+                    <genre>homme</genre>
                     <matiere-enseignee ref-matiere="m1"/>
                 </enseignant>
             </enseignants>
@@ -112,11 +118,13 @@
                     <nom>Clerc</nom>
                     <prenom>Clara</prenom>
                     <age>18</age>
+                    <genre>femme</genre>
                 </accompagnateur>
                 <accompagnateur>
                     <nom>Mitou</nom>
                     <prenom>Ludivine</prenom>
                     <age>35</age>
+                    <genre>femme</genre>
                 </accompagnateur>
             </accompagnateurs>
             <nombre_eleves>25</nombre_eleves>
@@ -139,8 +147,10 @@
             <nom>Moreau</nom>
             <prenom>Jules</prenom>
             <age>14</age>
+            <genre>homme</genre>
         </client>
     </offre>
+
     <offre type="accueil">
         <immersion_famille_accueil>
             <famille_accueil>
@@ -166,19 +176,23 @@
             <nom>Dupont</nom>
             <prenom>Julie</prenom>
             <age>35</age>
+            <genre>femme</genre>
         </client>
     </offre>
+
     <offre type="colonie">
         <colonie_de_vacances>
             <moniteurs>
                 <nom>Leblanc</nom>
                 <prenom>Antoine</prenom>
                 <age>26</age>
+                <genre>homme</genre>
             </moniteurs>
             <moniteurs>
                 <nom>Martin</nom>
                 <prenom>Lucas</prenom>
                 <age>32</age>
+                <genre>homme</genre>
             </moniteurs>
         </colonie_de_vacances>
         <langues>
@@ -198,6 +212,7 @@
             <nom>Smith</nom>
             <prenom>Lucie</prenom>
             <age>11</age>
+            <genre>femme</genre>
         </client>
     </offre>
 </offres>

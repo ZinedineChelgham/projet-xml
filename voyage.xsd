@@ -46,12 +46,20 @@
         </xs:restriction>
     </xs:simpleType>
 
-    <xs:complexType name="personne">
+    <xs:simpleType name="typeGenre">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="homme"/>
+            <xs:enumeration value="femme"/>
+            <xs:enumeration value="non_specifie"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="personne">   <!-- Type générique réutilisable -->
         <xs:sequence>
             <xs:element name="nom" type="xs:string"/>
             <xs:element name="prenom" type="xs:string"/>
             <xs:element name="age" type="xs:integer"/>
-            <!-- Autres éléments spécifiques à une personne -->
+            <xs:element name="genre" type="typeGenre"/>
         </xs:sequence>
     </xs:complexType>
 
