@@ -21,8 +21,8 @@
             </xs:choice>
             <xs:element ref="langues"/>
             <xs:element ref="destination"/>
-            <xs:element name="activites_sportives" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
-            <xs:element name="activites_culturelles" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element ref="activites_sportives"/>
+            <xs:element ref="activites_culturelles"/>
             <xs:element ref="dates"/>
             <xs:element ref="client"/>
         </xs:sequence>
@@ -90,6 +90,21 @@
         </xs:complexType>
     </xs:element>
 
+    <xs:element name="activites_sportives">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="activites_sportive" type="xs:string" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="activites_culturelles">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="activites_culturelle" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
     <xs:element name="destination">
         <xs:complexType>
             <xs:sequence>
@@ -103,7 +118,7 @@
     <xs:element name="colonie_de_vacances" type="colonie_de_vacancesType"/>
     <xs:complexType name="colonie_de_vacancesType">
         <xs:sequence>
-            <xs:element name="moniteurs" maxOccurs="unbounded">
+            <xs:element name="moniteur" maxOccurs="unbounded">
                 <xs:complexType>
                     <xs:complexContent>
                         <xs:extension base="personne"/>

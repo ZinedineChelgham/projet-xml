@@ -8,11 +8,15 @@
             <ville>Londres</ville>
             <pays>Royaume-Uni</pays>
         </destination>
-        <activites_sportives>Football</activites_sportives>
-        <activites_culturelles>Visite du British Museum</activites_culturelles>
+        <activites_sportives>
+            <activites_sportive>Football</activites_sportive>
+        </activites_sportives>
+        <activites_culturelles>
+            <activites_culturelle>Visite du British Museum</activites_culturelle>
+        </activites_culturelles>
         <dates>
-            <debut>2023-07-15</debut>
-            <fin>2023-09-15</fin>
+            <debut>2020-07-15</debut>
+            <fin>2020-09-15</fin>
         </dates>
         <client type="famille">
             <nom>Dupont</nom>
@@ -29,8 +33,12 @@
             <ville>Londres</ville>
             <pays>Royaume-Uni</pays>
         </destination>
-        <activites_sportives>Baseball</activites_sportives>
-        <activites_culturelles>Visite du British Museum</activites_culturelles>
+        <activites_sportives>
+            <activites_sportive>Baseball</activites_sportive>
+        </activites_sportives>
+        <activites_culturelles>
+            <activites_culturelle>Visite du British Museum</activites_culturelle>
+        </activites_culturelles>
         <dates>
             <debut>2022-02-15</debut>
             <fin>2022-03-15</fin>
@@ -50,11 +58,15 @@
             <ville>Barcelone</ville>
             <pays>Espagne</pays>
         </destination>
-        <activites_sportives>Basketball</activites_sportives>
-        <activites_culturelles>Visite du British Museum</activites_culturelles>
+        <activites_sportives>
+            <activites_sportive>Basketball</activites_sportive>
+        </activites_sportives>
+        <activites_culturelles>
+                <activites_culturelle>Visite de la ville</activites_culturelle>
+        </activites_culturelles>
         <dates>
-            <debut>2023-08-30</debut>
-            <fin>2023-10-30</fin>
+            <debut>2021-08-30</debut>
+            <fin>2021-10-30</fin>
         </dates>
         <client type="famille">
             <nom>Dupont</nom>
@@ -72,11 +84,15 @@
             <ville>Berlin</ville>
             <pays>Allemagne</pays>
         </destination>
-        <activites_sportives>Volley-ball</activites_sportives>
-        <activites_culturelles>Visite du mur de Berlin</activites_culturelles>
+        <activites_sportives>
+                <activites_sportive>Volley-ball</activites_sportive>
+        </activites_sportives>
+        <activites_culturelles>
+            <activites_culturelle>Visite du mur de Berlin</activites_culturelle>
+        </activites_culturelles>
         <dates>
-            <debut>2023-01-24</debut>
-            <fin>2023-02-10</fin>
+            <debut>2022-01-24</debut>
+            <fin>2022-02-10</fin>
         </dates>
             <client type="adulte">
                 <nom>Dubois</nom>
@@ -137,11 +153,15 @@
             <ville>Madrid</ville>
             <pays>Espagne</pays>
         </destination>
-        <activites_sportives>Golf</activites_sportives>
-        <activites_culturelles>Visite du musée du Prado</activites_culturelles>
+        <activites_sportives>
+            <activites_sportive>Golf</activites_sportive>
+        </activites_sportives>
+        <activites_culturelles>
+            <activites_culturelle>Visite du musée du Prado</activites_culturelle>
+        </activites_culturelles>
         <dates>
-            <debut>2023-06-08</debut>
-            <fin>2023-09-08</fin>
+            <debut>2022-06-08</debut>
+            <fin>2022-09-08</fin>
         </dates>
         <client type="enfant">
             <nom>Moreau</nom>
@@ -167,11 +187,16 @@
             <ville>Paris</ville>
             <pays>France</pays>
         </destination>
-        <activites_sportives>Cricket</activites_sportives>
-        <activites_culturelles>Visite de la Tour Eiffel, Promenade en bateau-mouche sur la Seine</activites_culturelles>
+        <activites_sportives>
+            <activites_sportive>Cricket</activites_sportive>
+        </activites_sportives>
+        <activites_culturelles>
+            <activites_culturelle>Visite de la Tour Eiffel</activites_culturelle>
+            <activites_culturelle>Promenade en bateau-mouche sur la Seine</activites_culturelle>
+        </activites_culturelles>
         <dates>
-            <debut>2023-12-07</debut>
-            <fin>2023-12-28</fin>
+            <debut>2022-12-07</debut>
+            <fin>2022-12-28</fin>
         </dates>
         <client type="famille">
             <nom>Dupont</nom>
@@ -183,18 +208,18 @@
 
     <offre type="colonie">
         <colonie_de_vacances>
-            <moniteurs>
+            <moniteur>
                 <nom>Leblanc</nom>
                 <prenom>Antoine</prenom>
                 <age>26</age>
                 <genre>homme</genre>
-            </moniteurs>
-            <moniteurs>
+            </moniteur>
+            <moniteur>
                 <nom>Martin</nom>
                 <prenom>Lucas</prenom>
                 <age>32</age>
                 <genre>homme</genre>
-            </moniteurs>
+            </moniteur>
         </colonie_de_vacances>
         <langues>
             <langue>Anglais</langue>
@@ -204,16 +229,232 @@
             <ville>Barcelone</ville>
             <pays>Espagne</pays>
         </destination>
-        <activites_sportives>Surf, Kayak, Beach-volley</activites_sportives>
-        <activites_culturelles>Visite du musée du Prado</activites_culturelles>
+        <activites_sportives>
+            <activites_sportive>Surf</activites_sportive>
+            <activites_sportive>Kayak</activites_sportive>
+            <activites_sportive>Beach-volley</activites_sportive>
+        </activites_sportives>
+        <activites_culturelles>
+            <activites_culturelle>Visite du musée du Prado</activites_culturelle>
+        </activites_culturelles>
         <dates>
-            <debut>2023-05-30</debut>
-            <fin>2023-10-24</fin>
+            <debut>2022-05-30</debut>
+            <fin>2022-10-24</fin>
         </dates>
         <client type="enfant">
             <nom>Smith</nom>
             <prenom>Lucie</prenom>
             <age>11</age>
+            <genre>femme</genre>
+        </client>
+    </offre>
+    <offre type="colonie">
+        <colonie_de_vacances>
+            <moniteur>
+                <nom>Label</nom>
+                <prenom>Charlie</prenom>
+                <age>46</age>
+                <genre>femme</genre>
+            </moniteur>
+            <moniteur>
+                <nom>Rulius</nom>
+                <prenom>Julien</prenom>
+                <age>32</age>
+                <genre>homme</genre>
+            </moniteur>
+        </colonie_de_vacances>
+        <langues>
+            <langue>Francais</langue>
+        </langues>
+        <destination>
+            <ville>Bayonne</ville>
+            <pays>France</pays>
+        </destination>
+        <activites_sportives>
+            <activites_sportive>Surf</activites_sportive>
+            <activites_sportive>Beach-volley</activites_sportive>
+        </activites_sportives>
+        <activites_culturelles>
+            <activites_culturelle>Visite du musée du Bayonne</activites_culturelle>
+        </activites_culturelles>
+        <dates>
+            <debut>2023-07-01</debut>
+            <fin>2023-07-15</fin>
+        </dates>
+        <client type="famille">
+            <nom>Dupont</nom>
+            <prenom>Julien</prenom>
+            <age>40</age>
+            <genre>homme</genre>
+        </client>
+    </offre>
+    <offre type="scolaire">
+        <voyage_scolaire>
+            <matieres>
+                <matiere id='m3'>
+                    <nom>Math</nom>
+                    <evaluation>true</evaluation>
+                </matiere>
+                <matiere id='m7'>
+                    <nom>Sociologie</nom>
+                    <evaluation>true</evaluation>
+                </matiere>
+            </matieres>
+            <enseignants>
+                <enseignant>
+                    <nom>Robert</nom>
+                    <prenom>Lucie</prenom>
+                    <age>35</age>
+                    <genre>femme</genre>
+                    <matiere-enseignee ref-matiere="m3"/>
+                </enseignant>
+                <enseignant>
+                    <nom>Nato</nom>
+                    <prenom>Yelevin</prenom>
+                    <age>23</age>
+                    <genre>femme</genre>
+                    <matiere-enseignee ref-matiere="m7"/>
+                </enseignant>
+            </enseignants>
+            <accompagnateurs>
+                <accompagnateur>
+                    <nom>Dupont</nom>
+                    <prenom>Marie</prenom>
+                    <age>25</age>
+                    <genre>femme</genre>
+                </accompagnateur>
+            </accompagnateurs>
+            <nombre_eleves>20</nombre_eleves>
+        </voyage_scolaire>
+        <langues>
+            <langue>anglais</langue>
+            <langue>espagnol</langue>
+        </langues>
+        <destination>
+            <ville>Madrid</ville>
+            <pays>Espagne</pays>
+        </destination>
+        <activites_sportives>
+            <activites_sportive>Football</activites_sportive>
+        </activites_sportives>
+        <activites_culturelles>
+            <activites_culturelle>Visite du musée du Barcelone</activites_culturelle>
+        </activites_culturelles>
+        <dates>
+            <debut>2021-06-15</debut>
+            <fin>2021-06-30</fin>
+        </dates>
+        <client type="adulte">
+            <nom>Martin</nom>
+            <prenom>Philippe</prenom>
+            <age>45</age>
+            <genre>homme</genre>
+        </client>
+    </offre>
+    <offre type="colonie">
+        <colonie_de_vacances>
+            <moniteur>
+                <nom>Dupont</nom>
+                <prenom>Paul</prenom>
+                <age>25</age>
+                <genre>homme</genre>
+            </moniteur>
+            <moniteur>
+                <nom>Dubois</nom>
+                <prenom>Sophie</prenom>
+                <age>22</age>
+                <genre>femme</genre>
+            </moniteur>
+        </colonie_de_vacances>
+        <langues>
+            <langue>anglais</langue>
+        </langues>
+        <destination>
+            <ville>Londres</ville>
+            <pays>Royaume-Uni</pays>
+        </destination>
+        <activites_sportives>
+            <activites_sportive>Football</activites_sportive>
+        </activites_sportives>
+        <activites_culturelles>
+            <activites_culturelle>Visite du musée du Londre</activites_culturelle>
+        </activites_culturelles>
+        <dates>
+            <debut>2023-07-01</debut>
+            <fin>2023-07-14</fin>
+        </dates>
+        <client type="famille">
+            <nom>Smith</nom>
+            <prenom>John</prenom>
+            <age>35</age>
+            <genre>homme</genre>
+        </client>
+    </offre>
+    <offre type="classique">
+        <langues>
+            <langue>espagnol</langue>
+            <langue>français</langue>
+        </langues>
+        <destination>
+            <ville>Barcelone</ville>
+            <pays>Espagne</pays>
+        </destination>
+        <activites_sportives>
+            <activites_sportive>Basket</activites_sportive>
+        </activites_sportives>
+        <activites_culturelles>
+            <activites_culturelle>Visite du parc de Barcelone</activites_culturelle>
+        </activites_culturelles>
+        <dates>
+            <debut>2023-08-01</debut>
+            <fin>2023-08-08</fin>
+        </dates>
+        <client type="adulte">
+            <nom>Leblanc</nom>
+            <prenom>Alice</prenom>
+            <age>28</age>
+            <genre>femme</genre>
+        </client>
+    </offre>
+    <offre type="colonie">
+        <colonie_de_vacances>
+            <moniteur>
+                <nom>Dupont</nom>
+                <prenom>Lucie</prenom>
+                <age>28</age>
+                <genre>femme</genre>
+            </moniteur>
+            <moniteur>
+                <nom>Leclerc</nom>
+                <prenom>Thomas</prenom>
+                <age>31</age>
+                <genre>homme</genre>
+            </moniteur>
+        </colonie_de_vacances>
+        <langues>
+            <langue>Anglais</langue>
+            <langue>Espagnol</langue>
+        </langues>
+        <destination>
+            <ville>Barcelone</ville>
+            <pays>Espagne</pays>
+        </destination>
+        <activites_sportives>
+            <activites_sportive>Golf</activites_sportive>
+            <activites_sportive>Football</activites_sportive>
+        </activites_sportives>
+        <activites_culturelles>
+            <activites_culturelle>Visite du musée Picasso</activites_culturelle>
+            <activites_culturelle>Soirée flamenco</activites_culturelle>
+        </activites_culturelles>
+        <dates>
+            <debut>2023-07-01</debut>
+            <fin>2023-07-15</fin>
+        </dates>
+        <client type="famille">
+            <nom>Durand</nom>
+            <prenom>Marie</prenom>
+            <age>36</age>
             <genre>femme</genre>
         </client>
     </offre>
