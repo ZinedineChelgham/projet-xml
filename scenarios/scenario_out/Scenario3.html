@@ -1,0 +1,137 @@
+<html>
+    <head>
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="../../style/scenario3.css">
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <title>Client&egrave;le</title>
+    </head>
+    <body>
+        <div id="app">
+            <h1>Statistiques de l'agence de voyage</h1>
+            <h2>Client et type de s&eacute;jour</h2>
+            <div id="pieChartsContainer">
+                <div>
+                    <canvas id="clientChart"></canvas>
+                </div>
+                <div>
+                    <canvas id="typeOfTravelChart"></canvas>
+                </div>
+            </div>
+            <br>
+            <h2>Nombre de client par ann&eacute;e</h2>
+            <div id="popularity">
+                <canvas id="popularityChart"></canvas>
+            </div>
+        </div>
+    </body>
+    <script>
+                let ctx = document.getElementById('clientChart');
+                let options = {
+                plugins: {
+                legend: {
+                labels: {
+                // This more specific font property overrides the global property
+                font: {
+                size: 20
+                }
+                }
+                }
+                }
+                }
+                let data = {
+                labels: [
+                'Famille',
+                'Adulte',
+                'Enfant'
+                ],
+                datasets: [{
+                label: 'nombre',
+                data: [7, 3, 2],
+                backgroundColor: [
+                'rgb(255, 99, 132)',
+                'rgb(54, 162, 235)',
+                'rgb(255, 205, 86)'
+                ],
+                hoverOffset: 4
+                }]
+                };
+                let config = {
+                type: 'doughnut',
+                data: data,
+                options: options
+                };
+                new Chart(ctx, config);
+
+
+                ctx = document.getElementById('typeOfTravelChart');
+                options = {
+                plugins: {
+                legend: {
+                labels: {
+                // This more specific font property overrides the global property
+                font: {
+                size: 20
+                }
+                }
+                }
+                }
+                }
+                data = {
+                labels: [
+                'colonie',
+                'scolaire',
+                'accueil',
+                'classique'
+                ],
+                datasets: [{
+                label: 'nombre',
+                data: [4, 2, 1, 5],
+                backgroundColor: [
+                'rgb(255, 99, 132)',
+                'rgb(54, 162, 235)',
+                'rgb(255, 205, 86)',
+                'rgba(75, 192, 192, 0.2)'
+                ],
+                hoverOffset: 4
+                }]
+                };
+                config = {
+                type: 'doughnut',
+                data: data,
+                options: options
+                };
+                new Chart(ctx, config);
+
+                ctx = document.getElementById('popularityChart');
+                new Chart(ctx, {
+                type: 'bar',
+                data: {
+                labels: [
+                2020,
+                2021,
+                2022,
+                2023,
+                
+                ],
+                datasets: [{
+                label: '# of Votes',
+                data: [
+                1,
+                2,
+                5,
+                4,
+                
+                ],
+                borderWidth: 1
+                }]
+                },
+                options: {
+                scales: {
+                y: {
+                beginAtZero: true
+                }
+                }
+                }
+                });
+            </script>
+</html>
