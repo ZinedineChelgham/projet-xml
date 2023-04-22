@@ -1,6 +1,4 @@
-{"utilisateurs":[
-{"nom":"Dupont","prenom":"Paul","age":"46"},
-{"nom":"Dupont","prenom":"Paul","age":"46"},
+{"utilisateurs":[ 
 {"nom":"Dupont","prenom":"Paul","age":"46"},
 {"nom":"Dubois","prenom":"Marie","age":"28"},
 {"nom":"Girard","prenom":"Lucie","age":"23"},
