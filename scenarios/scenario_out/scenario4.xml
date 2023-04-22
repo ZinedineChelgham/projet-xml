@@ -1,1 +1,20 @@
-<?xml version="1.0" encoding="windows-1252"?><resultats><pays name="France"><nb_total_familles_accueil>1</nb_total_familles_accueil><villes><ville name="Paris"><nb_familles_accueil>1</nb_familles_accueil></ville></villes></pays><pays name="Royaume-Uni"><nb_total_familles_accueil>0</nb_total_familles_accueil></pays><pays name="Espagne"><nb_total_familles_accueil>0</nb_total_familles_accueil></pays><pays name="Allemagne"><nb_total_familles_accueil>0</nb_total_familles_accueil></pays></resultats>
+<?xml version="1.0" encoding="windows-1252"?>
+<resultats>
+    <pays name="France">
+        <nb_total_familles_accueil>1</nb_total_familles_accueil>
+        <villes>
+            <ville name="Paris">
+                <nb_familles_accueil>1</nb_familles_accueil>
+            </ville>
+        </villes>
+    </pays>
+    <pays name="Royaume-Uni">
+        <nb_total_familles_accueil>0</nb_total_familles_accueil>
+    </pays>
+    <pays name="Espagne">
+        <nb_total_familles_accueil>0</nb_total_familles_accueil>
+    </pays>
+    <pays name="Allemagne">
+        <nb_total_familles_accueil>0</nb_total_familles_accueil>
+    </pays>
+</resultats>
