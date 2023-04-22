@@ -11,11 +11,17 @@
     <xsl:template match="client | enseignant | accompagnateur">
         <xsl:if test="not(preceding::*[concat(nom, '|', prenom, '|', age) = concat(current()/nom, '|', current()/prenom, '|', current()/age)])">
             <xsl:text>{"nom":"</xsl:text>
-            <xsl:value-of select="nom"/>
+            <xsl:value-of select="translate(nom, 'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')"/> <!-- upper-case method not supported -->
             <xsl:text>","prenom":"</xsl:text>
             <xsl:value-of select="prenom"/>
             <xsl:text>","age":"</xsl:text>
             <xsl:value-of select="age"/>
+            <xsl:text>","genre":"</xsl:text>
+            <xsl:choose>
+                <xsl:when test="genre = 'homme'">H</xsl:when>
+                <xsl:when test="genre = 'femme'">F</xsl:when>
+                <xsl:when test="genre = 'non_specifie'">-</xsl:when>
+            </xsl:choose>
             <xsl:text>"}</xsl:text>
             <xsl:if test="position() != last()">
                 <xsl:text>,</xsl:text>
