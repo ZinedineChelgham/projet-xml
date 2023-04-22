@@ -9,7 +9,7 @@
     </xsl:template>
 
     <xsl:template match="client | enseignant | accompagnateur">
-        <xsl:if test="not(preceding::*[concat(nom, '|', prenom, '|', age) = concat(current()/nom, '|', current()/prenom, '|', current()/age)])">
+        <xsl:if test="not(preceding::*[concat(nom, '|', prenom, '|', age) = concat(current()/nom, '|', current()/prenom, '|', current()/age)])"> <!-- would have been better to check with an id but we didn't use id in our model so we keep like that -->
             <xsl:text>{"nom":"</xsl:text>
             <xsl:value-of select="translate(nom, 'abcdefghijklmnopqrstuvwxyz', 'ABCDEFGHIJKLMNOPQRSTUVWXYZ')"/> <!-- upper-case method not supported -->
             <xsl:text>","prenom":"</xsl:text>
