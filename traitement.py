@@ -12,8 +12,12 @@ def display_all(root, bd_origin):
         type_offre = offre.get('type')
         langue = offre.find(".//langue").text
         destination = offre.find(".//ville").text + ', ' + offre.find(".//pays").text
-        activites_sportives = offre.find(".//activites_sportives").text
-        activites_culturelles = offre.find(".//activites_culturelles").text
+        activites_sportives = offre.find(".//activites_sportives")
+        activites_sportives = activites_sportives.findall(".//activites_sportive")
+        activites_sportives = [activite.text for activite in activites_sportives]
+        activites_culturelles = offre.find(".//activites_culturelles")
+        activites_culturelles = activites_culturelles.findall(".//activites_culturelle")
+        activites_culturelles = [activite.text for activite in activites_culturelles]
 
         date = offre.find(".//dates")
         date_debut = date.find("debut").text
@@ -63,11 +67,11 @@ def delete_offres_client(nom, prenom):
     offres = get_offres_client(nom, prenom)
     for offre in offres:
         root.remove(offre)
-    tree.write('agence_sejour_linguistique_bd_scripted.xml')
+    tree.write('./script_out/agence_sejour_linguistique_bd_scripted.xml')
 
 delete_offres_client("DUPONT", "Paul")
 # Charger le fichier XML
-tree = ET.parse('agence_sejour_linguistique_bd_scripted.xml')
+tree = ET.parse('./script_out/agence_sejour_linguistique_bd_scripted.xml')
 root = tree.getroot()
 display_all(root, "modifiée")
 
