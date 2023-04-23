@@ -39,7 +39,5 @@
     </xsl:template>
 
 
-    <!-- Template pour la correspondance "ARTISTE" qui ne fait rien -->
-    <!-- <xsl:template match="ARTISTE"/> -->
 
 </xsl:stylesheet>
